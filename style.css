@@ -1,0 +1,384 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    flex-wrap: nowrap;
+    height: 45px;
+}
+
+#header i#menu {
+    font-size: 21px;
+    margin: 0 30px;
+}
+
+#header i#youtube {
+    font-size: 27px;
+    color: red;
+}
+
+#header p {
+    padding: 0;
+    margin: 0;
+    font-family: monospace, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    margin-right: 160px;
+}
+
+#header .btn-search,
+#header #mobile-connect {
+    display: none;
+}
+
+#header .search-container {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+    border-radius: 20PX;
+    overflow: hidden;
+    height: 35px;
+    width: 600px;
+    margin-right: 8px;
+}
+
+#header .search-container input {
+    border: 0;
+    padding-left: 10px;
+    width: 100%;
+}
+
+#header .search-container button{
+    border: none;
+    border-left: 1px solid rgba(0, 0, 0, 0.219);
+    width: 50px;
+    text-align: center;
+}
+
+#header .search-container button i {
+    font-size: 17px;
+}
+
+#header .microphone-btn {
+    height: 35px;
+    min-width: 35px;
+    border-radius: 25px;
+    border: none;
+    margin-right: 70px;
+}
+
+#header .microphone-btn i {
+    font-size: 18px;
+}
+
+#header .creat-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    border: none;
+    font-size: 17px;
+    height: 35px;
+    border-radius: 25px;
+    width: 100px;
+    margin-right: 8px;
+}
+
+#header .creat-btn i{
+    font-size: 15px;
+}
+
+#header .notification {
+    font-size: 23px;
+    margin-right: 8px;
+}
+
+#header .div-img {
+    min-width: 38px;
+    max-width: 38px;
+    height: 38px;
+    overflow: hidden;
+    border-radius: 200px;
+    margin-right: 8px;
+}
+
+#header .div-img img {
+    width: 100%;
+}
+
+#main-interface {
+    display: flex;
+    height:  calc(100vh - 45px);
+    overflow: hidden;
+}
+
+#left-side {
+    width: 80px;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    margin-left: 4px;
+    overflow-y: auto;
+}
+
+#left-side .plus-btn {
+    display: none;
+}
+
+#left-side div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 75px;
+    width: 70px;
+    /* border: none; */
+    border-radius: 5px;
+    transition:  0.3s;
+}
+
+#left-side div:hover {
+    background-color: rgba(128, 128, 128, 0.13);
+}
+
+#right-side {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#nav-link {
+    height: 30px;
+    display: flex;
+    white-space: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: auto;
+    width: 100%;
+    padding: 3px 10px;
+    margin: 0 10px;
+}
+
+#nav-link::-webkit-scrollbar {
+    display: none;
+}
+
+#nav-link a {
+    text-decoration: none;
+    margin: 5px 18px;
+    height: 20px;
+    background-color: rgba(128, 128, 128, 0.08);
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 5px;
+    color: black;
+    transition: 0.3s;
+}
+
+#nav-link a:hover {
+    background-color: rgba(128, 128, 128, 0.2);
+}
+
+#nav-link a:first-child {
+    background-color: black;
+    color: white;
+}
+
+#video-scroll {
+    flex: 1;
+    overflow-y: auto;
+}
+
+#videos {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
+}
+#videos .container {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    width: auto;
+}
+
+#videos .container img {
+    width: 100%;
+}
+
+#videos .div-info {
+    display: flex;
+}
+
+#videos .div-info div{
+    /* border: 2px solid red; */
+}
+
+#videos .profile-img {
+    min-width: 35px;
+    max-width: 35px;
+    height: 35px;
+    overflow: hidden;
+    border-radius: 25px;
+    margin: 2px 5px 0 0;
+}
+
+#videos .profile-info {
+    display: flex;
+    flex-direction: column;
+}
+
+#videos .profile-info p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    margin: 5px 5px 5px 0;
+}
+
+#videos .profile-info small {
+    margin-bottom: 2px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+@media (max-width : 1100px) {
+    #videos {
+        grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+    }
+}
+
+
+@media (max-width: 799px) {
+    #header i#menu {
+        margin: 0;
+        margin-left: 10px;
+    }
+
+    #header p {
+        margin-right: 20%;
+    }
+
+    #header .search-container {
+        border: 1px solid rgba(0, 0, 0, 0.164);
+        min-width: 35px;
+        max-width: 35px;
+    }
+
+    #header .search-container input {
+        display: none;
+    }
+
+    #header .search-container button {
+        border: none;
+    }
+
+    #header .microphone-btn {
+        margin-right: 0;
+    }
+
+    #left-side {
+        display: none;
+    }
+}
+
+@media (max-width:550px) {
+    #videos {
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    }
+}
+@media (max-width: 447px) {
+    #header {
+        padding-right: 10px;
+    }
+
+    
+    #header i#menu,
+    #header .creat-btn,
+    #header .search-container,
+    #header .microphone-btn,
+    #header .div-img {
+        display: none;
+    }
+
+    #header i#youtube {
+        margin-left: 15px;
+    }
+
+    #header p {
+    margin-right: 120px;
+}
+
+    #header #mobile-connect {
+        display: block;
+        width: 27px;
+    }
+
+    #header .btn-search {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        height: 35px;
+        width: 35px;
+        background-color: white;
+    }
+
+    #header .btn-search i{
+        font-size: 20px;
+    }
+
+    #left-side {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    overflow: hidden;
+    position: fixed;
+    z-index: 999;
+    bottom: 0;
+    background-color: white;
+    }
+
+    #left-side .plus-btn {
+        display: block;
+        display: flex;
+        align-items: center;
+    }
+
+    #left-side .plus-btn button {
+        height: 40px;
+        width: 40px;
+        border: none;
+        border-radius: 25px;
+    }
+
+    #left-side .plus-btn button i{
+        font-size: 25px;
+    }
+
+    #left-side div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 40px;
+    /* border: none; */
+    border-radius: 5px;
+    transition: 0.3s;
+    }
+}
+
+
+
