@@ -313,12 +313,13 @@ body {
     }
 
     #header p {
-    margin-right: 120px;
+    margin-right: 90px;
 }
 
     #header #mobile-connect {
         display: block;
         width: 27px;
+        margin-right: 10px;
     }
 
     #header .btn-search {
@@ -378,6 +379,19 @@ body {
     border-radius: 5px;
     transition: 0.3s;
     }
+
+    #nav-link {
+    height: 50px;
+    margin: 0 3px;
+    }
+
+    #nav-link a {
+    margin: 5px 10px;
+    height: 20px;
+    font-size: 10px;
+    padding: 5px 10px 0px 10px;
+}
+
 }
 
 
